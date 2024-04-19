@@ -11,12 +11,20 @@ public class Question5
         
         int[] numbers = new int[count];
         
-        System.out.println("Enter the integers:");
+        int mode = 0;
+        int maxCount = 0;
+        int[] seenNumbers = new int[101]; 
+    
+        System.out.println("Enter the numbers:");
         for (int i = 0; i < count; i++) {
-            numbers[i] = in.nextInt();
+            int num = in.nextInt();
+            seenNumbers[num]++; 
+
+            if (seenNumbers[num] > maxCount) {
+                maxCount = seenNumbers[num];
+                mode = num;
+            }
         }
-        
-        int mode = findMode(numbers);
         System.out.println("The mode is: " + mode);
-    }
+  }
 }
