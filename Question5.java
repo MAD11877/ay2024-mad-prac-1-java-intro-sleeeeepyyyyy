@@ -6,7 +6,6 @@ public class Question5
   {
     Scanner in = new Scanner(System.in);
 
-    System.out.println("Enter the number of integers:");
         int count = in.nextInt();
         
         int[] numbers = new int[count];
@@ -15,7 +14,6 @@ public class Question5
         int maxCount = 0;
         int[] seenNumbers = new int[101]; 
     
-        System.out.println("Enter the numbers:");
         for (int i = 0; i < count; i++) {
             int num = in.nextInt();
             seenNumbers[num]++; 
@@ -25,6 +23,6 @@ public class Question5
                 mode = num;
             }
         }
-        System.out.println("The mode is: " + mode);
+        System.out.println(mode);
   }
 }
