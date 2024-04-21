@@ -4,22 +4,18 @@ public class Question2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
-        double height = getUserInput(in, "Enter your height in meters (m): ");
-        double weight = getUserInput(in, "Enter your weight in kilograms (kg): ");
+        System.out.print("Enter your height in meters (m): ");
+        double height = in.nextDouble(); 
         
-        double bmi = calculateBMI(height, weight);
+        System.out.print("Enter your weight in kilograms (kg): ");
+        double weight = in.nextDouble(); 
         
+        double bmi = weight / (height * height); 
+        
+        // Corrected: Print the BMI value
         System.out.println("Your BMI is: " + bmi);
-        in.close();
-    }
-    
-    static double getUserInput(Scanner scanner, String prompt) {
-        System.out.print(prompt);
-        return scanner.nextDouble();
-    }
-    
-    static double calculateBMI(double height, double weight) {
-        return weight / (height * height);
+        
+        in.close(); // Close the scanner
     }
 }
 
