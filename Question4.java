@@ -6,7 +6,6 @@ public class Question4
   {
     Scanner in = new Scanner(System.in);
     
-    System.out.print("Enter an integer for base of triangle: ");
     int star = in.nextInt(); 
 
     for (int i = star; i > 0; i--) {
